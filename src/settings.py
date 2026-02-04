@@ -1,0 +1,23 @@
+import pygame
+
+WINDOW_WIDTH = 1280
+WINDOW_HEIGHT = 780
+
+FPS = 60
+
+CELL_SIZE = 20
+FOOD_COUNT = 3
+OBSTACLE_COUNT = 6
+
+INITIAL_MOVE_INTERVAL = 0.18
+SPEED_UP_FACTOR = 0.9
+
+BG_COLOR = (20, 20, 20)
+SNAKE_COLOR = (0, 200, 0)
+FOOD_COLOR = (200, 50, 50)
+OBSTACLE_COLOR = (120, 120, 120)
+BLACK = pygame.Color(0, 0, 0)
+WHITE = pygame.Color(255, 255, 255)
+RED = pygame.Color(255, 0, 0)
+GREEN = pygame.Color(0, 255, 0)
+BLUE = pygame.Color(0, 0, 255)
