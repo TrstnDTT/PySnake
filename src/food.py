@@ -17,9 +17,9 @@ class Food:
                 self.position = (x, y)
                 break
 
-    def draw(self, screen):
+    def draw(self, screen, offset=(0, 0)):
         pygame.draw.rect(
             screen,
             FOOD_COLOR,
-            (*self.position, CELL_SIZE, CELL_SIZE)
+            (self.position[0] + offset[0], self.position[1] + offset[1], CELL_SIZE, CELL_SIZE)
         )

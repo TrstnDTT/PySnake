@@ -1,8 +1,9 @@
 import pygame
-from settings import WINDOW_HEIGHT, WINDOW_WIDTH, FOOD_COLOR, FPS, BG_COLOR
+from settings import WINDOW_HEIGHT, WINDOW_WIDTH, FPS
 from game import Game
 
 pygame.init()
+pygame.display.set_caption("PySnake")
 
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
@@ -16,10 +17,9 @@ while (running):
         if event.type == pygame.QUIT:
             running = False
         else: 
-            Game.handle_event(game, event)
-    Game.update(game, dt)
-    screen.fill(BG_COLOR)
-    Game.draw(game, screen)
+            game.handle_event(event)
+    game.update(dt)
+    game.draw(screen)
     pygame.display.flip()
 
 pygame.quit()
